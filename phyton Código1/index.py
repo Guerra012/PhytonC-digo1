@@ -1,18 +1,18 @@
 print("Olá! Vamos cadastrar roupas")
 
 roupas=[]
-quantidade_roupas=20
+quantidade_roupas = 5
 
-for i in range(1, quantidade_roupas+1):
-    tiporoupa = input (f"Digite o tipo de roupa{i}:")
-    cor  = input (f"Digite a cor da roupa{i}:")
-    roupas.append ({"tiporoupa": tiporoupa, "Cor": cor})
+for i in range(1, quantidade_roupas + 1):
+    tipo_roupas = input (f"Digite o tipo de roupa{i}:")
+    cor  = input (f"Digite a cor da roupa{i}: ")
+    roupas.append ({"tipo_roupas": tipo_roupas, "Cor": cor})
 
-OPCAO = input ("Roupas cadastradas com sucesso! Deseja exibir o estoque completo (s/n):"). strip (). lower()
+opcao = input ("Roupas cadastradas com sucesso! Deseja exibir o estoque completo? (s/n):").strip().lower()
 
-if OPCAO == 's':
-    print("\n Estoque de roupas cadastrados:")
+if opcao == 's':
+    print("\nEstoque de roupas cadastrados:")
     for idx, roupa in enumerate (roupas, start=1):
-        print (f"{idx} tiporoupa: {roupa ['tiporoupa']} /cor: {tiporoupa['cor']}")
-    else:
+        print (f"{idx} Tipo: {roupa ['tipo_roupas']} | Cor: {roupa ['Cor']}")
+else:
         print ("Ok! Encerrando o estoque")
